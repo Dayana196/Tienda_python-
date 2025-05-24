@@ -1,0 +1,57 @@
+def PedirNumero():
+    while True:
+        entrada = input("Dame un número: ")
+
+        if len(entrada) >= 4 and entrada.isdigit():
+            print("                          ")
+            print("                         ")
+            print(f"El número dado tiene {len(entrada)} cifras")
+            break
+        else:
+            print("Dame un número más grande (mínimo 4 cifras)")
+
+
+    arrayDeNumero = [int(i) for i in entrada]
+
+
+    suma = sum(arrayDeNumero)
+    contadorPares = 0
+    contadorImpares = 0
+
+    for numero in arrayDeNumero:
+        if numero % 2 == 0:
+            contadorPares += 1
+        else:
+            contadorImpares += 1
+    
+    print(f"Suma de los dígitos: {suma}")
+    print(f"Cantidad de pares: {contadorPares}")
+    print(f"Cantidad de impares: {contadorImpares}")
+
+def main():
+
+    while True:
+        print("\n--- Menú ---")
+        print("1. Pedir número")
+        print("2. Salir")
+
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            PedirNumero()
+        elif opcion == "2":
+            print("Adiós.")
+            break
+        else:
+            print("Opción no válida.")
+main()
+
+
+
+
+
+                  
+
+           
+
+
