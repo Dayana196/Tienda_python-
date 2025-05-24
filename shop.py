@@ -1,24 +1,25 @@
 productos = ["pan","harina","chocorramo","gala","coca-cola zero"]
 precios = [2000, 3000, 4500,4800,4500]
 
-nombretienda = "Mi tienda!💰"
-print (f"Bienvenidos a {nombretienda}")
-print (f"productos disponibles: {len(productos)}")
+
 
 carrito=[]
 cantidad=[]
 total=0 
 
+while True:
+    menu = f"""
+ __  __ _   _____ _                _ _ _        _ 
+|  \\/  (_) |_   _(_) ___ _ __   __| (_) |_ __ _| |
+| |\\/| | |   | | | |/ _ \\ '_ \\ / _` | | __/ _` | |
+| |  | | |   | | | |  __/ | | | (_| | | || (_| |_|
+|_|  |_|_|   |_| |_|\\___|_| |_|\\__,_|_|\\__\\__,_(_)
 
-
-
-
-
-
-
-
-while True: 
-    
+MENU
+    1. Productos
+    2. Carrito ({len(carrito)} : ${total})
+    3. Finalizar
+"""
     print(lastmenu) 
     opcion =input ("seleccione una opcion: ") 
     if opcion =="1":
@@ -42,6 +43,7 @@ while True:
         carrito.append(productos[busqueda])
         cantidad.append(cantidad_busqueda)
         total-total + (cantidad_busqueda * precios[busqueda])
+        input("Continuar...")
 
 
     elif opcion =="3":
@@ -51,6 +53,7 @@ while True:
     else: 
         print ("opcion no valida")
         input ("continuar...")
+
 
 
 
